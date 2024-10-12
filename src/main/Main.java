@@ -1,8 +1,13 @@
 package main;
 
+import input.MyMouseListener;
+
 import javax.swing.JFrame;
 
 public class Main extends JFrame {
+
+    private MyMouseListener myMouseListener;
+
     public Main () {
         setSize(768, 576);
         setVisible(true);
@@ -13,8 +18,15 @@ public class Main extends JFrame {
         add(gameScreen);
     }
 
-        public static void main(String[] args) {
+    private void initInputs() {
+        MyMouseListener myMouseListener = new MyMouseListener();
+        addMouseListener(myMouseListener);
+        addMouseMotionListener(myMouseListener);
+    }
+
+    public static void main(String[] args) {
         System.out.println("bro");
         Main main = new Main();
-        }
+        main.initInputs();
+    }
 }
