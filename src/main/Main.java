@@ -1,7 +1,6 @@
 package main;
 
 import input.MyMouseListener;
-
 import javax.swing.JFrame;
 
 public class Main extends JFrame {
@@ -12,7 +11,7 @@ public class Main extends JFrame {
         setSize(768, 576);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLocation(300, 150);
+        setLocation(null);
 
         GameScreen gameScreen = new GameScreen();
         add(gameScreen);
